@@ -6,9 +6,9 @@ import(
 	"database/sql"
 )
 var db *sql.DB
-func Connection(dbpath string)*sql.DB{
+func Connection()*sql.DB{
 
-	Db,err := sql.Open(dbpath)
+	Db,err := sql.Open("mysql","gittyjobs:Ancons927@tcp(gittyjobs.c96w2gvk26br.us-west-2.rds.amazonaws.com:3306)/gittyjobs")
 	
 	if err!=nil{
 		log.Fatalln(err)
